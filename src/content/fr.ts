@@ -126,7 +126,7 @@ export const fr: Dictionary = {
     message: "Message (optionnel)",
     send: "Envoyer la demande",
     sending: "Envoi…",
-    success: "Merci ! Votre demande est bien reçue. Nous vous répondons rapidement.",
+    success: "Merci ! Votre demande est bien reçue. Un e-mail de confirmation vous a été envoyé : nous vous répondons sous 24 h avec un lien WhatsApp.",
     error: "Une erreur est survenue. Écrivez-nous sur WhatsApp.",
     required: "Champ requis",
     invalidEmail: "E-mail invalide",
