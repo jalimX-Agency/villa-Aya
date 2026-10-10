@@ -1,0 +1,160 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Accommodation (rename per client: Suite, Room, Villa, Tent)
+model Suite {
+  id                String    @id @default(cuid())
+  name              String
+  nameEn            String    @default("")
+  slug              String    @unique
+  tagline           String    @default("")
+  taglineEn         String    @default("")
+  description       String    @default("")
+  descriptionEn     String    @default("")
+  longDescription   String    @default("")
+  longDescriptionEn String    @default("")
+  price             Float     @default(0)
+  originalPrice     Float     @default(0)
+  currency          String    @default("MAD")
+  features          String    @default("")
+  featuresEn        String    @default("")
+  amenities         String    @default("")
+  amenitiesEn       String    @default("")
+  image             String    @default("")
+  images            String    @default("")
+  maxGuests         Int       @default(2)
+  maxChildren       Int       @default(0)
+  bedType           String    @default("")
+  size              String    @default("")
+  hasAC             Boolean   @default(false)
+  type              String    @default("")
+  featured          Boolean   @default(false)
+  order             Int       @default(0)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  bookings          Booking[]
+}
+
+model Activity {
+  id                String    @id @default(cuid())
+  name              String
+  nameEn            String    @default("")
+  slug              String    @unique
+  description       String    @default("")
+  descriptionEn     String    @default("")
+  longDescription   String    @default("")
+  longDescriptionEn String    @default("")
+  duration          String    @default("")
+  price             Float     @default(0)
+  originalPrice     Float     @default(0)
+  childPricePercent Float     @default(0)
+  currency          String    @default("MAD")
+  includes          String    @default("")
+  includesEn        String    @default("")
+  schedule          String    @default("")
+  category          String    @default("")
+  transportIncluded Boolean   @default(false)
+  image             String    @default("")
+  images            String    @default("")
+  featured          Boolean   @default(false)
+  order             Int       @default(0)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  bookings          Booking[]
+}
+
+model BlogPost {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  excerpt   String   @default("")
+  content   String   @default("")
+  image     String   @default("")
+  category  String   @default("")
+  author    String   @default("")
+  featured  Boolean  @default(false)
+  order     Int      @default(0)
+  titleEn   String   @default("")
+  excerptEn String   @default("")
+  contentEn String   @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String   @default("")
+  altEn     String   @default("")
+  caption   String   @default("")
+  captionEn String   @default("")
+  category  String   @default("")
+  featured  Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  quote     String
+  author    String
+  location  String   @default("")
+  rating    Int      @default(5)
+  source    String   @default("website")
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Booking {
+  id          String    @id @default(cuid())
+  firstName   String
+  lastName    String
+  email       String
+  phone       String    @default("")
+  serviceType String
+  suiteId     String?
+  suite       Suite?    @relation(fields: [suiteId], references: [id])
+  activityId  String?
+  activity    Activity? @relation(fields: [activityId], references: [id])
+  checkIn     DateTime?
+  checkOut    DateTime?
+  date        DateTime?
+  guests      Int       @default(1)
+  children    Int       @default(0)
+  experiences String    @default("")
+  specialReqs String    @default("")
+  status      String    @default("pending")
+  totalAmount Float     @default(0)
+  currency    String    @default("MAD")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String   @default("")
+  subject   String   @default("")
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String   @default("")
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
