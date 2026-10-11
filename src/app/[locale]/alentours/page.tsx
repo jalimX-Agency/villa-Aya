@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/content";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { images } from "@/content/images";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
@@ -10,8 +12,7 @@ import { CtaBand } from "@/components/CtaBand";
 export async function generateMetadata({ params }: PageProps<"/[locale]/alentours">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const d = getDictionary(locale);
-  return { title: d.around.title, description: d.around.intro };
+  return pageMetadata(locale, "around");
 }
 
 export default async function AroundPage({ params }: PageProps<"/[locale]/alentours">) {
@@ -20,6 +21,7 @@ export default async function AroundPage({ params }: PageProps<"/[locale]/alento
   const d = getDictionary(locale);
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(locale, "around", d)} />
       <PageHeader eyebrow="Villa Aya" title={d.around.title} intro={d.around.intro} img={images.piscine[4]} alt={d.alts.piscine} />
       <section className="mx-auto max-w-[1500px] px-5 pb-20 md:px-10 md:pb-32">
         <ul>

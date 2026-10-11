@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/content";
+import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { images } from "@/content/images";
 import { PageHeader } from "@/components/PageHeader";
 import { StackedCards } from "@/components/StackedCards";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
+import { Faq } from "@/components/Faq";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/la-villa">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const d = getDictionary(locale);
-  return { title: d.villa.title, description: d.villa.intro };
+  return pageMetadata(locale, "villa");
 }
 
 export default async function VillaPage({ params }: PageProps<"/[locale]/la-villa">) {
@@ -23,6 +25,7 @@ export default async function VillaPage({ params }: PageProps<"/[locale]/la-vill
 
   return (
     <>
+      <JsonLd data={[breadcrumbJsonLd(locale, "villa", d), faqJsonLd(d)]} />
       <PageHeader eyebrow="Villa Aya" title={d.villa.title} intro={d.villa.intro} img={images.piscine[2]} alt={d.alts.piscine} />
 
       <StackedCards
@@ -54,6 +57,8 @@ export default async function VillaPage({ params }: PageProps<"/[locale]/la-vill
           </ul>
         </Reveal>
       </section>
+
+      <Faq d={d} />
 
       <CtaBand d={d} locale={locale} />
     </>

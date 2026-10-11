@@ -39,7 +39,7 @@ export function Hero({ d, locale }: { d: Dictionary; locale: Locale }) {
 
       <motion.div style={reduce ? undefined : { y: textY, opacity: textOpacity }} className="absolute inset-x-0 bottom-0 flex flex-col gap-5 px-5 pb-10 text-paper md:px-10 md:pb-14">
         <p className="label">{d.hero.eyebrow}</p>
-        <h1 className="display max-w-5xl text-[clamp(2.6rem,8.37vw,8.68rem)]">{d.hero.title}</h1>
+        <h1 className="display max-w-5xl text-[clamp(2.6rem,8.37vw,8.68rem)]">{d.hero.title}<span className="sr-only">. {d.seoH1}</span></h1>
         <div className="flex flex-wrap items-center gap-3">
           <Link href={hrefFor(locale, "contact")} className="btn btn-primary">{d.hero.cta}</Link>
           <a href={whatsappUrl(d.whatsappMessage)} target="_blank" rel="noopener noreferrer" className="btn border border-paper text-paper hover:bg-paper hover:text-ink">{d.hero.whatsapp}</a>

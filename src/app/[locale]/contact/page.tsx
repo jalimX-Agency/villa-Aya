@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/content";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { site, whatsappUrl } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -9,8 +11,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 export async function generateMetadata({ params }: PageProps<"/[locale]/contact">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const d = getDictionary(locale);
-  return { title: d.form.title, description: d.contact.text };
+  return pageMetadata(locale, "contact");
 }
 
 export default async function ContactPage({ params }: PageProps<"/[locale]/contact">) {
@@ -19,6 +20,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const d = getDictionary(locale);
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(locale, "contact", d)} />
       <PageHeader eyebrow="Villa Aya" title={d.contact.title} intro={d.contact.text} />
       <section className="mx-auto grid max-w-[1500px] gap-12 px-5 pb-24 md:grid-cols-[1fr_1.5fr] md:gap-20 md:px-10 md:pb-36">
         <aside>

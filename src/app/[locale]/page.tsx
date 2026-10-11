@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { getDictionary, type PageLink } from "@/content";
 import { images } from "@/content/images";
-import { site } from "@/lib/site";
+import { pageMetadata, rentalJsonLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { hrefFor } from "@/lib/routes";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
@@ -17,33 +19,23 @@ const linkImages = {
   around: images.piscine[4],
 } as const;
 
+export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  return pageMetadata(locale, "home");
+}
+
 export default async function Home({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const d = getDictionary(locale);
-
-  // No price, rating or geo here: none of those are confirmed yet.
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "VacationRental",
-    name: site.name,
-    url: `${site.url}/${locale}`,
-    description: d.meta.description,
-    image: `${site.url}${images.piscine[1].src}`,
-    address: { "@type": "PostalAddress", addressLocality: "Ahfir", postalCode: "60350", addressRegion: "Oujda", addressCountry: "MA" },
-    telephone: `+${site.whatsapp}`,
-    petsAllowed: true,
-    amenityFeature: ["Pool", "Jacuzzi", "Hammam", "Gym", "Free WiFi", "Free parking", "Air conditioning"].map((name) => ({
-      "@type": "LocationFeatureSpecification", name, value: true,
-    })),
-  };
 
   const night = images.exterieur[0];
   const links = Object.keys(linkImages) as PageLink[];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <JsonLd data={rentalJsonLd(locale, d)} />
       <Hero d={d} locale={locale} />
 
       <section className="mx-auto grid max-w-[1500px] gap-12 px-5 py-20 md:grid-cols-[1.4fr_1fr] md:gap-20 md:px-10 md:py-36">

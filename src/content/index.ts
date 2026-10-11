@@ -6,6 +6,7 @@ export type VillaCard = "chalet" | "rose" | "salon" | "bains";
 export type SpaceKey = "pool" | "hammam" | "gym" | "salon" | "prayer" | "table";
 export type FilterKey = "all" | "outdoor" | "chalet" | "salons" | "rooms" | "wellness" | "table";
 export type PageLink = "villa" | "spaces" | "gallery" | "around";
+export type SeoPage = "home" | "villa" | "spaces" | "gallery" | "around" | "contact";
 
 export type Dictionary = {
   meta: { title: string; description: string };
@@ -42,6 +43,9 @@ export type Dictionary = {
     | "breakfast" | "message" | "send" | "sending" | "success" | "error" | "required" | "invalidEmail" | "invalidDates",
     string
   >;
+  seo: Record<SeoPage, { title: string; description: string }>;
+  seoH1: string;
+  faq: { title: string; items: readonly { q: string; a: string }[] };
   whatsappMessage: string;
   footer: { rights: string; rules: string; location: string };
   more: string;

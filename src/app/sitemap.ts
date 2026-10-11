@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: path === "" ? 1 : 0.7,
-      alternates: { languages: Object.fromEntries(locales.map((x) => [x, `${site.url}/${x}${path}`])) },
+      alternates: { languages: { ...Object.fromEntries(locales.map((x) => [x, `${site.url}/${x}${path}`])), "x-default": `${site.url}/fr${path}` } },
     })),
   );
 }

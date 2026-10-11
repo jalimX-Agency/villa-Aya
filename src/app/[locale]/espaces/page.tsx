@@ -3,6 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n/config";
 import { getDictionary, type SpaceKey } from "@/content";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { images, type Img } from "@/content/images";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
@@ -11,8 +13,7 @@ import { CtaBand } from "@/components/CtaBand";
 export async function generateMetadata({ params }: PageProps<"/[locale]/espaces">): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const d = getDictionary(locale);
-  return { title: d.spaces.title, description: d.spaces.intro };
+  return pageMetadata(locale, "spaces");
 }
 
 type Row = { key: SpaceKey; main: { img: Img; group: string }; second?: { img: Img; group: string } };
@@ -33,6 +34,7 @@ export default async function SpacesPage({ params }: PageProps<"/[locale]/espace
 
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(locale, "spaces", d)} />
       <PageHeader eyebrow="Villa Aya" title={d.spaces.title} intro={d.spaces.intro} img={images["salon-marocain"][0]} alt={d.alts["salon-marocain"]} />
 
       <section className="mx-auto max-w-[1500px] space-y-24 px-5 pb-20 md:space-y-40 md:px-10 md:pb-32">

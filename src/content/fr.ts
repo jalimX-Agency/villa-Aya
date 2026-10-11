@@ -132,6 +132,45 @@ export const fr: Dictionary = {
     invalidEmail: "E-mail invalide",
     invalidDates: "La date de départ doit suivre l'arrivée",
   },
+  seo: {
+    home: {
+      title: "Villa Aya | Villa privée avec piscine à Ahfir, Oujda",
+      description: "Villa en bois de 3000 m² avec piscine, jacuzzi et hammam beldi à Ahfir, entre Oujda et Saïdia. Séjour en villa privée : demandez votre devis.",
+    },
+    villa: {
+      title: "Villa privée à Ahfir : 2 suites, 2 chambres | Villa Aya",
+      description: "Chalet en bois, deux suites, deux chambres, trois salles de bain, cuisines équipées et grands salons. Arrivée de 14 h à 23 h, départ de 11 h à 12 h.",
+    },
+    spaces: {
+      title: "Piscine, jacuzzi, hammam et salle de sport | Villa Aya",
+      description: "Piscine privée, jacuzzi, hammam beldi, salle de sport, salle de prière et grand salon marocain : tous les espaces de la villa, à Ahfir près d'Oujda.",
+    },
+    gallery: {
+      title: "Galerie photos de la villa | Villa Aya",
+      description: "Toutes les photos de Villa Aya : chalet en bois, piscine, hammam, salons, chambres et jardin à Ahfir, près d'Oujda.",
+    },
+    around: {
+      title: "Alentours : Ahfir, Saïdia et Oujda | Villa Aya",
+      description: "Villa Aya est à Ahfir, à environ 6 km de la ville et 20 km de Saïdia, près de l'aéroport d'Oujda-Angad. Découvrez les alentours.",
+    },
+    contact: {
+      title: "Demande de devis et contact | Villa Aya",
+      description: "Demandez votre devis pour la Villa Aya à Ahfir (Oujda) : indiquez vos dates, nous répondons sous 24 h avec un lien WhatsApp.",
+    },
+  },
+  seoH1: "Villa Aya, villa privée avec piscine à Ahfir, Oujda",
+  faq: {
+    title: "Questions fréquentes",
+    items: [
+      { q: "Où se trouve la Villa Aya ?", a: "À Ahfir (60350), dans la région d'Oujda, au Maroc : à environ 6 km d'Ahfir et 20 km de Saïdia, à proximité de l'aéroport d'Oujda-Angad." },
+      { q: "Combien de chambres compte la villa ?", a: "Deux suites, deux chambres et trois salles de bain, avec deux cuisines équipées et plusieurs salons." },
+      { q: "Y a-t-il une piscine ?", a: "Oui : une piscine privée et un jacuzzi, ainsi qu'un hammam beldi, une salle de sport et une salle de prière." },
+      { q: "Quel est le prix d'un séjour ?", a: "Nous n'affichons pas de tarif : chaque séjour est devisé selon vos dates et le nombre de personnes. Envoyez votre demande, nous répondons sous 24 h avec un lien WhatsApp." },
+      { q: "Quels sont les horaires d'arrivée et de départ ?", a: "L'arrivée se fait de 14 h à 23 h et le départ de 11 h à 12 h." },
+      { q: "Les animaux et les enfants sont-ils acceptés ?", a: "Oui. Les enfants sont les bienvenus (lit bébé gratuit sur demande) et les animaux sont admis sans supplément. La villa est non-fumeur et les fêtes ne sont pas autorisées." },
+      { q: "Le petit-déjeuner est-il possible ?", a: "Oui, un petit-déjeuner halal est proposé sur demande, en buffet ou à la carte." },
+    ],
+  },
   whatsappMessage: "Bonjour, je souhaite un devis pour la Villa Aya.",
   footer: { rights: "Tous droits réservés.", rules: "Non-fumeur · Fêtes et événements non autorisés", location: "Ahfir, 60350 Oujda, Maroc" },
   more: "Découvrir",
