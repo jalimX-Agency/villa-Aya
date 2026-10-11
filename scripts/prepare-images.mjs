@@ -1,7 +1,11 @@
 // Reads the client's JPEGs, classifies them by the 1-based index of the sorted file list,
-// and writes optimised WebP (full + thumb) to public/images + a typed manifest.
+// and writes three pre-sized AVIF files per photo to public/images + a typed manifest.
+//   name-640.avif   (cards, gallery thumbs, mobile)
+//   name-1080.avif  (tablets, half-width desktop images)
+//   name.avif       (up to 1600 px, full-bleed desktop)
+// They are served straight from the CDN by src/lib/image-loader.ts: no runtime optimisation.
 import sharp from "sharp";
-import { readdirSync, writeFileSync, mkdirSync } from "node:fs";
+import { readdirSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 
 const SRC = process.argv[2];
@@ -25,10 +29,14 @@ const GROUPS = {
 };
 
 const files = readdirSync(SRC).filter((f) => f.endsWith(".jpeg")).sort();
+rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 const manifest = {};
 const map = [];
 const used = new Set();
+
+// Resize so the LONGEST side stays within `max` only for the 1600 file; the smaller buckets key off width.
+const toWidth = (img, w, q) => img.clone().resize({ width: w, withoutEnlargement: true }).avif({ quality: q, effort: 4 });
 
 for (const [group, idxs] of Object.entries(GROUPS)) {
   manifest[group] = [];
@@ -41,10 +49,11 @@ for (const [group, idxs] of Object.entries(GROUPS)) {
     const img = sharp(join(SRC, file)).rotate();
     const meta = await img.clone().metadata();
     const w = meta.autoOrient?.width ?? meta.width, h = meta.autoOrient?.height ?? meta.height;
-    await img.clone().webp({ quality: 80 }).toFile(join(OUT, `${name}.webp`));
-    await img.clone().resize({ width: 640, withoutEnlargement: true }).webp({ quality: 72 }).toFile(join(OUT, `${name}-sm.webp`));
-    manifest[group].push({ src: `/images/${name}.webp`, thumb: `/images/${name}-sm.webp`, width: w, height: h });
-    map.push(`| ${idx} | ${file} | ${name}.webp |`);
+    await toWidth(img, 640, 48).toFile(join(OUT, `${name}-640.avif`));
+    await toWidth(img, 1080, 48).toFile(join(OUT, `${name}-1080.avif`));
+    await toWidth(img, 1600, 48).toFile(join(OUT, `${name}.avif`));
+    manifest[group].push({ src: `/images/${name}.avif`, thumb: `/images/${name}-640.avif`, width: w, height: h });
+    map.push(`| ${idx} | ${file} | ${name}.avif |`);
   }
 }
 const unused = files.map((_, i) => i + 1).filter((i) => !used.has(i));

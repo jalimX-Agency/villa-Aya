@@ -8,11 +8,12 @@ import { site } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 // Marcellus: calm Roman capitals chosen by the client (single weight, 400).
 const display = Marcellus({ variable: "--font-display", subsets: ["latin"], weight: "400", display: "swap" });
-const body = Figtree({ variable: "--font-body", subsets: ["latin"], display: "swap" });
-const mono = JetBrains_Mono({ variable: "--font-mono", subsets: ["latin"], display: "swap" });
+const body = Figtree({ variable: "--font-body", subsets: ["latin"], weight: ["400", "500"], display: "swap" });
+const mono = JetBrains_Mono({ variable: "--font-mono", subsets: ["latin"], weight: ["400"], display: "swap" });
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f4eee3" };
 
@@ -41,6 +42,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
         <Header locale={locale} d={d} />
         {children}
         <Footer locale={locale} d={d} />
+        <WhatsAppButton d={d} />
       </body>
     </html>
   );

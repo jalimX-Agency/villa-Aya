@@ -3,298 +3,298 @@ export type Img = { src: string; thumb: string; width: number; height: number };
 export const images = {
   "exterieur": [
     {
-      "src": "/images/exterieur-01.webp",
-      "thumb": "/images/exterieur-01-sm.webp",
+      "src": "/images/exterieur-01.avif",
+      "thumb": "/images/exterieur-01-640.avif",
       "width": 1099,
       "height": 1453
     },
     {
-      "src": "/images/exterieur-02.webp",
-      "thumb": "/images/exterieur-02-sm.webp",
+      "src": "/images/exterieur-02.avif",
+      "thumb": "/images/exterieur-02-640.avif",
       "width": 1130,
       "height": 1453
     },
     {
-      "src": "/images/exterieur-03.webp",
-      "thumb": "/images/exterieur-03-sm.webp",
+      "src": "/images/exterieur-03.avif",
+      "thumb": "/images/exterieur-03-640.avif",
       "width": 1057,
       "height": 1354
     },
     {
-      "src": "/images/exterieur-04.webp",
-      "thumb": "/images/exterieur-04-sm.webp",
+      "src": "/images/exterieur-04.avif",
+      "thumb": "/images/exterieur-04-640.avif",
       "width": 1016,
       "height": 1437
     }
   ],
   "piscine": [
     {
-      "src": "/images/piscine-01.webp",
-      "thumb": "/images/piscine-01-sm.webp",
+      "src": "/images/piscine-01.avif",
+      "thumb": "/images/piscine-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/piscine-02.webp",
-      "thumb": "/images/piscine-02-sm.webp",
+      "src": "/images/piscine-02.avif",
+      "thumb": "/images/piscine-02-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/piscine-03.webp",
-      "thumb": "/images/piscine-03-sm.webp",
+      "src": "/images/piscine-03.avif",
+      "thumb": "/images/piscine-03-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/piscine-04.webp",
-      "thumb": "/images/piscine-04-sm.webp",
+      "src": "/images/piscine-04.avif",
+      "thumb": "/images/piscine-04-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/piscine-05.webp",
-      "thumb": "/images/piscine-05-sm.webp",
+      "src": "/images/piscine-05.avif",
+      "thumb": "/images/piscine-05-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "terrasse": [
     {
-      "src": "/images/terrasse-01.webp",
-      "thumb": "/images/terrasse-01-sm.webp",
+      "src": "/images/terrasse-01.avif",
+      "thumb": "/images/terrasse-01-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "hammam": [
     {
-      "src": "/images/hammam-01.webp",
-      "thumb": "/images/hammam-01-sm.webp",
+      "src": "/images/hammam-01.avif",
+      "thumb": "/images/hammam-01-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/hammam-02.webp",
-      "thumb": "/images/hammam-02-sm.webp",
+      "src": "/images/hammam-02.avif",
+      "thumb": "/images/hammam-02-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/hammam-03.webp",
-      "thumb": "/images/hammam-03-sm.webp",
+      "src": "/images/hammam-03.avif",
+      "thumb": "/images/hammam-03-640.avif",
       "width": 1200,
       "height": 1600
     }
   ],
   "salle-de-sport": [
     {
-      "src": "/images/salle-de-sport-01.webp",
-      "thumb": "/images/salle-de-sport-01-sm.webp",
+      "src": "/images/salle-de-sport-01.avif",
+      "thumb": "/images/salle-de-sport-01-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/salle-de-sport-02.webp",
-      "thumb": "/images/salle-de-sport-02-sm.webp",
+      "src": "/images/salle-de-sport-02.avif",
+      "thumb": "/images/salle-de-sport-02-640.avif",
       "width": 1600,
       "height": 1066
     },
     {
-      "src": "/images/salle-de-sport-03.webp",
-      "thumb": "/images/salle-de-sport-03-sm.webp",
+      "src": "/images/salle-de-sport-03.avif",
+      "thumb": "/images/salle-de-sport-03-640.avif",
       "width": 1200,
       "height": 1600
     }
   ],
   "priere": [
     {
-      "src": "/images/priere-01.webp",
-      "thumb": "/images/priere-01-sm.webp",
+      "src": "/images/priere-01.avif",
+      "thumb": "/images/priere-01-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "salon-marocain": [
     {
-      "src": "/images/salon-marocain-01.webp",
-      "thumb": "/images/salon-marocain-01-sm.webp",
+      "src": "/images/salon-marocain-01.avif",
+      "thumb": "/images/salon-marocain-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-marocain-02.webp",
-      "thumb": "/images/salon-marocain-02-sm.webp",
+      "src": "/images/salon-marocain-02.avif",
+      "thumb": "/images/salon-marocain-02-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "salon-chalet": [
     {
-      "src": "/images/salon-chalet-01.webp",
-      "thumb": "/images/salon-chalet-01-sm.webp",
+      "src": "/images/salon-chalet-01.avif",
+      "thumb": "/images/salon-chalet-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-chalet-02.webp",
-      "thumb": "/images/salon-chalet-02-sm.webp",
+      "src": "/images/salon-chalet-02.avif",
+      "thumb": "/images/salon-chalet-02-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-chalet-03.webp",
-      "thumb": "/images/salon-chalet-03-sm.webp",
+      "src": "/images/salon-chalet-03.avif",
+      "thumb": "/images/salon-chalet-03-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-chalet-04.webp",
-      "thumb": "/images/salon-chalet-04-sm.webp",
+      "src": "/images/salon-chalet-04.avif",
+      "thumb": "/images/salon-chalet-04-640.avif",
       "width": 1600,
       "height": 1066
     },
     {
-      "src": "/images/salon-chalet-05.webp",
-      "thumb": "/images/salon-chalet-05-sm.webp",
+      "src": "/images/salon-chalet-05.avif",
+      "thumb": "/images/salon-chalet-05-640.avif",
       "width": 1600,
       "height": 1066
     },
     {
-      "src": "/images/salon-chalet-06.webp",
-      "thumb": "/images/salon-chalet-06-sm.webp",
+      "src": "/images/salon-chalet-06.avif",
+      "thumb": "/images/salon-chalet-06-640.avif",
       "width": 1600,
       "height": 1066
     },
     {
-      "src": "/images/salon-chalet-07.webp",
-      "thumb": "/images/salon-chalet-07-sm.webp",
+      "src": "/images/salon-chalet-07.avif",
+      "thumb": "/images/salon-chalet-07-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/salon-chalet-08.webp",
-      "thumb": "/images/salon-chalet-08-sm.webp",
+      "src": "/images/salon-chalet-08.avif",
+      "thumb": "/images/salon-chalet-08-640.avif",
       "width": 1200,
       "height": 1600
     }
   ],
   "salon-rdc": [
     {
-      "src": "/images/salon-rdc-01.webp",
-      "thumb": "/images/salon-rdc-01-sm.webp",
+      "src": "/images/salon-rdc-01.avif",
+      "thumb": "/images/salon-rdc-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-rdc-02.webp",
-      "thumb": "/images/salon-rdc-02-sm.webp",
+      "src": "/images/salon-rdc-02.avif",
+      "thumb": "/images/salon-rdc-02-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/salon-rdc-03.webp",
-      "thumb": "/images/salon-rdc-03-sm.webp",
+      "src": "/images/salon-rdc-03.avif",
+      "thumb": "/images/salon-rdc-03-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "cuisine": [
     {
-      "src": "/images/cuisine-01.webp",
-      "thumb": "/images/cuisine-01-sm.webp",
+      "src": "/images/cuisine-01.avif",
+      "thumb": "/images/cuisine-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/cuisine-02.webp",
-      "thumb": "/images/cuisine-02-sm.webp",
+      "src": "/images/cuisine-02.avif",
+      "thumb": "/images/cuisine-02-640.avif",
       "width": 1600,
       "height": 1200
     }
   ],
   "chambre-chalet": [
     {
-      "src": "/images/chambre-chalet-01.webp",
-      "thumb": "/images/chambre-chalet-01-sm.webp",
+      "src": "/images/chambre-chalet-01.avif",
+      "thumb": "/images/chambre-chalet-01-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-chalet-02.webp",
-      "thumb": "/images/chambre-chalet-02-sm.webp",
+      "src": "/images/chambre-chalet-02.avif",
+      "thumb": "/images/chambre-chalet-02-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-chalet-03.webp",
-      "thumb": "/images/chambre-chalet-03-sm.webp",
+      "src": "/images/chambre-chalet-03.avif",
+      "thumb": "/images/chambre-chalet-03-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-chalet-04.webp",
-      "thumb": "/images/chambre-chalet-04-sm.webp",
+      "src": "/images/chambre-chalet-04.avif",
+      "thumb": "/images/chambre-chalet-04-640.avif",
       "width": 1600,
       "height": 1066
     }
   ],
   "chambre-rose": [
     {
-      "src": "/images/chambre-rose-01.webp",
-      "thumb": "/images/chambre-rose-01-sm.webp",
+      "src": "/images/chambre-rose-01.avif",
+      "thumb": "/images/chambre-rose-01-640.avif",
       "width": 1600,
       "height": 1200
     },
     {
-      "src": "/images/chambre-rose-02.webp",
-      "thumb": "/images/chambre-rose-02-sm.webp",
+      "src": "/images/chambre-rose-02.avif",
+      "thumb": "/images/chambre-rose-02-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-rose-03.webp",
-      "thumb": "/images/chambre-rose-03-sm.webp",
+      "src": "/images/chambre-rose-03.avif",
+      "thumb": "/images/chambre-rose-03-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-rose-04.webp",
-      "thumb": "/images/chambre-rose-04-sm.webp",
+      "src": "/images/chambre-rose-04.avif",
+      "thumb": "/images/chambre-rose-04-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/chambre-rose-05.webp",
-      "thumb": "/images/chambre-rose-05-sm.webp",
+      "src": "/images/chambre-rose-05.avif",
+      "thumb": "/images/chambre-rose-05-640.avif",
       "width": 1200,
       "height": 1600
     }
   ],
   "salle-de-bain": [
     {
-      "src": "/images/salle-de-bain-01.webp",
-      "thumb": "/images/salle-de-bain-01-sm.webp",
+      "src": "/images/salle-de-bain-01.avif",
+      "thumb": "/images/salle-de-bain-01-640.avif",
       "width": 1200,
       "height": 1600
     },
     {
-      "src": "/images/salle-de-bain-02.webp",
-      "thumb": "/images/salle-de-bain-02-sm.webp",
+      "src": "/images/salle-de-bain-02.avif",
+      "thumb": "/images/salle-de-bain-02-640.avif",
       "width": 1200,
       "height": 1600
     }
   ],
   "petit-dejeuner": [
     {
-      "src": "/images/petit-dejeuner-01.webp",
-      "thumb": "/images/petit-dejeuner-01-sm.webp",
+      "src": "/images/petit-dejeuner-01.avif",
+      "thumb": "/images/petit-dejeuner-01-640.avif",
       "width": 1600,
       "height": 1066
     },
     {
-      "src": "/images/petit-dejeuner-02.webp",
-      "thumb": "/images/petit-dejeuner-02-sm.webp",
+      "src": "/images/petit-dejeuner-02.avif",
+      "thumb": "/images/petit-dejeuner-02-640.avif",
       "width": 1600,
       "height": 1066
     }

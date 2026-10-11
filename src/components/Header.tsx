@@ -25,7 +25,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dictionary }) {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/15 bg-paper/90 backdrop-blur">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/15 bg-paper/95">
         <div className="mx-auto flex h-16 max-w-[1500px] items-center justify-between px-5 md:px-10">
           <Link href={`/${locale}`} aria-label="Villa Aya" className="cursor-pointer">
             <Image src="/brand/logo-icon-light.png" alt="Villa Aya" width={40} height={40} className="h-10 w-auto sm:hidden" priority />
