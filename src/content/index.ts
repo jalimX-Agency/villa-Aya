@@ -43,6 +43,16 @@ export type Dictionary = {
     | "breakfast" | "message" | "send" | "sending" | "success" | "error" | "required" | "invalidEmail" | "invalidDates",
     string
   >;
+  reviews: {
+    title: string;
+    score: string;
+    scoreLabel: string;
+    basis: string;
+    cta: string;
+    translated: string; // template with {from}
+    criteria: readonly { label: string; value: string }[];
+    items: readonly { quote: string; author: string; country: string; from?: string; original?: string }[];
+  };
   seo: Record<SeoPage, { title: string; description: string }>;
   seoH1: string;
   faq: { title: string; items: readonly { q: string; a: string }[] };

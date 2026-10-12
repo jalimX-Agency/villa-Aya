@@ -11,6 +11,7 @@ import { hrefFor } from "@/lib/routes";
 import { Hero } from "@/components/Hero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
+import { Reviews } from "@/components/Reviews";
 
 const linkImages = {
   villa: images["chambre-chalet"][0],
@@ -60,6 +61,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           ))}
         </dl>
       </section>
+
+      <Reviews d={d} />
 
       <section className="mx-auto max-w-[1500px] px-5 py-20 md:px-10 md:py-32">
         <ul>

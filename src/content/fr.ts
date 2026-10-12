@@ -133,6 +133,41 @@ export const fr: Dictionary = {
     invalidEmail: "E-mail invalide",
     invalidDates: "La date de départ doit suivre l'arrivée",
   },
+  reviews: {
+    title: "Ce que disent nos hôtes",
+    score: "10",
+    scoreLabel: "Exceptionnel",
+    basis: "Note des voyageurs sur Booking.com, d'après 3 commentaires.",
+    cta: "Lire tous les avis sur Booking.com",
+    translated: "Traduit de {from}",
+    criteria: [
+      { label: "Propreté", value: "10" },
+      { label: "Confort", value: "10" },
+      { label: "Équipements", value: "10" },
+      { label: "Personnel", value: "10" },
+      { label: "Rapport qualité/prix", value: "10" },
+      { label: "Situation géographique", value: "9,2" },
+    ],
+    items: [
+      {
+        quote: "La maison est juste top , magnifique spacieuse tres bien situé au calme c’est un 10/10 le personnel sur place très chaleureux accueillant a l’ecoute je recommande 100% c’est sur que je reviendrai",
+        author: "Abdelrahime",
+        country: "France",
+      },
+      {
+        quote: "Nous avons passé un excellent séjour à la Villa Aya. Le cadre est tout simplement magnifique, avec un paysage superbe et une décoration très soignée. L'accueil a été parfait : la dame et le monsieur qui s'occupent de la villa sont d'une extrême gentillesse. Nous avons adoré la vue imprenable. Merci pour tout, nous reviendrons avec plaisir, incha Allah !",
+        author: "Amine",
+        country: "Maroc",
+      },
+      {
+        quote: "Le confort, le luxe, un accueil raffiné, un excellent service et une communication constante.",
+        author: "Abdulrahman",
+        country: "Émirats arabes unis",
+        from: "l'arabe",
+        original: "الراحة والفخامة والتعامل الراقي والخدمة والتواصل الدائم",
+      },
+    ],
+  },
   seo: {
     home: {
       title: "Villa Aya | Villa privée avec piscine à Ahfir, Oujda",

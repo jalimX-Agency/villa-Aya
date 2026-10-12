@@ -5,6 +5,7 @@ export const site = {
   phoneDisplay: "+33 7 87 45 40 31",
   demandEmail: process.env.DEMAND_TO_EMAIL ?? "res@villaaya.ma",
   // Google Business Profile ("villa aya", Plus Code WXFJ+927 Aidane). Coordinates confirmed on Google Maps.
+  bookingUrl: "https://www.booking.com/hotel/ma/villa-aya-oujda.fr.html",
   googleProfile: "https://share.google/6qZuHkoiijR54Uwrn",
   geo: { lat: 34.9234375, lng: -2.0199375 },
 } as const;

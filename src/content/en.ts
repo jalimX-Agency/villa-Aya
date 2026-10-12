@@ -133,6 +133,45 @@ export const en: Dictionary = {
     invalidEmail: "Invalid email",
     invalidDates: "Check-out must be after check-in",
   },
+  reviews: {
+    title: "What our guests say",
+    score: "10",
+    scoreLabel: "Exceptional",
+    basis: "Guest rating on Booking.com, based on 3 reviews.",
+    cta: "Read all reviews on Booking.com",
+    translated: "Translated from {from}",
+    criteria: [
+      { label: "Cleanliness", value: "10" },
+      { label: "Comfort", value: "10" },
+      { label: "Facilities", value: "10" },
+      { label: "Staff", value: "10" },
+      { label: "Value for money", value: "10" },
+      { label: "Location", value: "9.2" },
+    ],
+    items: [
+      {
+        quote: "The house is simply superb, beautiful and spacious, very well located and peaceful, a 10/10. The staff on site are very warm, welcoming and attentive. I recommend it 100%, I will definitely come back.",
+        author: "Abdelrahime",
+        country: "France",
+        from: "French",
+        original: "La maison est juste top , magnifique spacieuse tres bien situé au calme c’est un 10/10 le personnel sur place très chaleureux accueillant a l’ecoute je recommande 100% c’est sur que je reviendrai",
+      },
+      {
+        quote: "We had an excellent stay at Villa Aya. The setting is quite simply magnificent, with a superb landscape and very carefully chosen decor. The welcome was perfect: the lady and gentleman who look after the villa are extremely kind. We loved the stunning view. Thank you for everything, we'll gladly come back, inshallah!",
+        author: "Amine",
+        country: "Morocco",
+        from: "French",
+        original: "Nous avons passé un excellent séjour à la Villa Aya. Le cadre est tout simplement magnifique, avec un paysage superbe et une décoration très soignée. L'accueil a été parfait : la dame et le monsieur qui s'occupent de la villa sont d'une extrême gentillesse. Nous avons adoré la vue imprenable. Merci pour tout, nous reviendrons avec plaisir, incha Allah !",
+      },
+      {
+        quote: "Comfort, luxury, refined hospitality, excellent service and constant communication.",
+        author: "Abdulrahman",
+        country: "United Arab Emirates",
+        from: "Arabic",
+        original: "الراحة والفخامة والتعامل الراقي والخدمة والتواصل الدائم",
+      },
+    ],
+  },
   seo: {
     home: {
       title: "Villa Aya | Private villa with pool in Ahfir, Oujda",
