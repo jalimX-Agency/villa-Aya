@@ -5,10 +5,10 @@
 ## 1. الوصف (حد Google 750 حرفاً)
 
 **الفرنسية**
-> Villa Aya est une villa privée en bois de 3000 m² à Ahfir, entre Oujda et Saïdia. Piscine privée, jacuzzi, hammam beldi, salle de sport, salle de prière, deux cuisines équipées, terrasses et jardin. Deux suites, deux chambres, trois salles de bain. Séjour en villa entière, en famille ou entre amis. Petit-déjeuner halal sur demande, animaux admis, non-fumeur, fêtes non autorisées. Arrivée de 14 h à 23 h, départ de 11 h à 12 h. Demandez votre devis sur villaaya.ma : nous répondons sous 24 h avec un lien WhatsApp.
+> Villa Aya est une villa privée en bois de 3000 m² à Ahfir, entre Oujda et Saïdia. Piscine privée, jacuzzi, hammam beldi, salle de sport, salle de prière, deux cuisines équipées, terrasses et jardin. Deux suites, deux chambres, trois salles de bain. Séjour en villa entière, en famille ou entre amis. Petit-déjeuner halal sur demande, animaux admis, non-fumeur, fêtes et événements sur demande dans le respect du lieu. Arrivée de 14 h à 23 h, départ de 11 h à 12 h. Demandez votre devis sur villaaya.ma : nous répondons sous 24 h avec un lien WhatsApp.
 
 **English**
-> Villa Aya is a private 3,000 m² timber villa in Ahfir, between Oujda and Saïdia. Private pool, jacuzzi, beldi hammam, gym, prayer room, two equipped kitchens, terraces and garden. Two suites, two bedrooms, three bathrooms. The whole villa is yours, for family or friends. Halal breakfast on request, pets welcome, non-smoking, no parties. Check-in 2 pm to 11 pm, check-out 11 am to 12 pm. Request your quote at villaaya.ma: we reply within 24 hours with a WhatsApp link.
+> Villa Aya is a private 3,000 m² timber villa in Ahfir, between Oujda and Saïdia. Private pool, jacuzzi, beldi hammam, gym, prayer room, two equipped kitchens, terraces and garden. Two suites, two bedrooms, three bathrooms. The whole villa is yours, for family or friends. Halal breakfast on request, pets welcome, non-smoking, parties and events on request, respecting the place. Check-in 2 pm to 11 pm, check-out 11 am to 12 pm. Request your quote at villaaya.ma: we reply within 24 hours with a WhatsApp link.
 
 > يقبل الملف وصفاً واحداً بلغة واحدة. أنصح بالفرنسية، فهي لغة أغلب الباحثين عن «villa Oujda».
 
@@ -32,7 +32,7 @@
 2. **Y a-t-il une piscine ?** Oui : piscine privée et jacuzzi, ainsi qu'un hammam beldi et une salle de sport.
 3. **Quel est le prix d'un séjour ?** Chaque séjour est devisé selon vos dates et le nombre de personnes. Demandez votre devis sur villaaya.ma, réponse sous 24 h.
 4. **Quels sont les horaires d'arrivée et de départ ?** Arrivée de 14 h à 23 h, départ de 11 h à 12 h.
-5. **Les animaux sont-ils acceptés ?** Oui, sans supplément. La villa est non-fumeur et les fêtes ne sont pas autorisées.
+5. **Les animaux sont-ils acceptés ?** Oui, sans supplément. La villa est non-fumeur. Fêtes et événements possibles sur demande, dans le respect du cadre familial et religieux du lieu.
 
 ## 6. الصور (ارفعها بهذا الترتيب؛ الأولى تصبح صورة الغلاف)
 أصولها في `C:\Users\pc\Documents\JalimX\clients\villa aya\media\images`، والتصنيف في `docs/images-map.md`:

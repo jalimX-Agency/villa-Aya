@@ -68,7 +68,7 @@ const t = {
       wa: "Écrire sur WhatsApp",
       bye: "À très bientôt,",
       team: "L'équipe Villa Aya",
-      rules: "Non-fumeur · Fêtes et événements non autorisés",
+      rules: "Non-fumeur · Fêtes et événements sur demande",
     },
   },
   en: {
@@ -111,7 +111,7 @@ const t = {
       wa: "Message us on WhatsApp",
       bye: "See you soon,",
       team: "The Villa Aya team",
-      rules: "Non-smoking · No parties or events",
+      rules: "Non-smoking · Parties and events on request",
     },
   },
 } as const;

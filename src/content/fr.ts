@@ -49,7 +49,7 @@ export const fr: Dictionary = {
     rules: [
       "Arrivée de 14 h à 23 h, départ de 11 h à 12 h",
       "Non-fumeur",
-      "Fêtes et événements non autorisés",
+      "Fêtes et événements possibles sur demande, dans le respect du cadre familial et religieux du lieu",
       "Enfants bienvenus, lit bébé gratuit sur demande",
       "Animaux admis sans supplément",
     ],
@@ -227,11 +227,12 @@ export const fr: Dictionary = {
       { q: "Y a-t-il une piscine ?", a: "Oui : une piscine privée et un jacuzzi, ainsi qu'un hammam beldi, une salle de sport et une salle de prière." },
       { q: "Quel est le prix d'un séjour ?", a: "Nous n'affichons pas de tarif : chaque séjour est devisé selon vos dates et le nombre de personnes. Envoyez votre demande, nous répondons sous 24 h avec un lien WhatsApp." },
       { q: "Quels sont les horaires d'arrivée et de départ ?", a: "L'arrivée se fait de 14 h à 23 h et le départ de 11 h à 12 h." },
-      { q: "Les animaux et les enfants sont-ils acceptés ?", a: "Oui. Les enfants sont les bienvenus (lit bébé gratuit sur demande) et les animaux sont admis sans supplément. La villa est non-fumeur et les fêtes ne sont pas autorisées." },
+      { q: "Les animaux et les enfants sont-ils acceptés ?", a: "Oui. Les enfants sont les bienvenus (lit bébé gratuit sur demande) et les animaux sont admis sans supplément. La villa est non-fumeur." },
+      { q: "Peut-on organiser une fête ou un événement ?", a: "Oui, sur demande et avec des limites : le cadre est familial et respecte les valeurs religieuses du lieu. Précisez votre événement dans votre demande de devis et nous vous indiquons les conditions." },
       { q: "Le petit-déjeuner est-il possible ?", a: "Oui, un petit-déjeuner halal est proposé sur demande, en buffet ou à la carte." },
     ],
   },
   whatsappMessage: "Bonjour, je souhaite un devis pour la Villa Aya.",
-  footer: { rights: "Tous droits réservés.", rules: "Non-fumeur · Fêtes et événements non autorisés", location: "Ahfir, 60350 Oujda, Maroc", privacy: "Confidentialité" },
+  footer: { rights: "Tous droits réservés.", rules: "Non-fumeur · Fêtes et événements sur demande, dans le respect du lieu", location: "Ahfir, 60350 Oujda, Maroc", privacy: "Confidentialité" },
   more: "Découvrir",
 };

@@ -49,7 +49,7 @@ export const en: Dictionary = {
     rules: [
       "Check-in 2 pm to 11 pm, check-out 11 am to 12 pm",
       "Non-smoking",
-      "No parties or events",
+      "Parties and events possible on request, respecting the family and religious setting of the place",
       "Children welcome, free cot on request",
       "Pets welcome at no extra charge",
     ],
@@ -231,11 +231,12 @@ export const en: Dictionary = {
       { q: "Is there a pool?", a: "Yes: a private pool and a jacuzzi, plus a beldi hammam, a gym and a prayer room." },
       { q: "How much does a stay cost?", a: "We don't list prices: every stay is quoted from your dates and party size. Send your request and we reply within 24 hours with a WhatsApp link." },
       { q: "What are the check-in and check-out times?", a: "Check-in is from 2 pm to 11 pm and check-out from 11 am to 12 pm." },
-      { q: "Are children and pets welcome?", a: "Yes. Children are welcome (free cot on request) and pets are allowed at no extra charge. The villa is non-smoking and parties are not allowed." },
+      { q: "Are children and pets welcome?", a: "Yes. Children are welcome (free cot on request) and pets are allowed at no extra charge. The villa is non-smoking." },
+      { q: "Can we hold a party or an event?", a: "Yes, on request and within limits: the setting is family-oriented and respects the religious values of the place. Describe your event in your quote request and we'll tell you the conditions." },
       { q: "Is breakfast available?", a: "Yes, a halal breakfast is available on request, as a buffet or à la carte." },
     ],
   },
   whatsappMessage: "Hello, I'd like a quote for Villa Aya.",
-  footer: { rights: "All rights reserved.", rules: "Non-smoking · No parties or events", location: "Ahfir, 60350 Oujda, Morocco", privacy: "Privacy" },
+  footer: { rights: "All rights reserved.", rules: "Non-smoking · Parties and events on request, respecting the place", location: "Ahfir, 60350 Oujda, Morocco", privacy: "Privacy" },
   more: "Discover",
 };
