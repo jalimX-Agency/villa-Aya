@@ -22,6 +22,18 @@ export async function POST(req: NextRequest) {
   if (!parsed.success) return NextResponse.json({ error: "invalid" }, { status: 400 });
   const v = parsed.data;
 
+  // Anti-spam: verified only when a Turnstile secret is configured (otherwise the honeypot + rate limit apply).
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    const check = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body: new URLSearchParams({ secret: turnstileSecret, response: v.captcha, remoteip: ip }),
+    })
+      .then((r) => r.json() as Promise<{ success?: boolean }>)
+      .catch(() => ({ success: false }));
+    if (!check.success) return NextResponse.json({ error: "captcha_failed" }, { status: 400 });
+  }
+
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("RESEND_API_KEY is not set; quote request not delivered");

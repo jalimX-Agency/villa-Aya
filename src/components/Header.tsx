@@ -42,16 +42,16 @@ export function Header({ locale, d }: { locale: Locale; d: Dictionary }) {
           </nav>
 
           <div className="flex items-center gap-4">
-            <span className="label flex items-center gap-2 text-muted" aria-label="Language">
+            <span className="label flex items-center text-muted" aria-label="Language">
               {locales.map((l, i) => (
                 <span key={l} className="flex items-center gap-2">
-                  {i > 0 && <span aria-hidden>/</span>}
-                  <Link href={langHref(l)} hrefLang={l} aria-current={l === locale ? "true" : undefined} className={`cursor-pointer ${l === locale ? "text-ink" : "hover:text-ink"}`}>{l}</Link>
+                  {i > 0 && <span aria-hidden className="px-0.5">/</span>}
+                  <Link href={langHref(l)} hrefLang={l} aria-current={l === locale ? "true" : undefined} className={`-my-3 inline-flex min-h-11 min-w-8 cursor-pointer items-center justify-center ${l === locale ? "text-ink" : "hover:text-ink"}`}>{l}</Link>
                 </span>
               ))}
             </span>
             <Link href={hrefFor(locale, "contact")} className="btn btn-primary !min-h-10 !px-4">{d.nav.quote}</Link>
-            <button onClick={() => setOpen(true)} className="label cursor-pointer lg:hidden" aria-expanded={open} aria-controls="mobile-menu">{d.nav.menu}</button>
+            <button onClick={() => setOpen(true)} className="label -my-3 min-h-11 min-w-11 cursor-pointer lg:hidden" aria-expanded={open} aria-controls="mobile-menu">{d.nav.menu}</button>
           </div>
         </div>
       </header>

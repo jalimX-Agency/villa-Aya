@@ -113,7 +113,7 @@ export function Hero({ d, locale }: { d: Dictionary; locale: Locale }) {
                 onClick={() => go(i)}
                 aria-label={`${i + 1} / ${slides.length}`}
                 aria-current={i === s.over}
-                className="group flex h-6 w-10 cursor-pointer items-center"
+                className="group flex h-11 w-10 cursor-pointer items-center"
               >
                 <span className={`block h-[3px] w-full transition-colors ${i === s.over ? "bg-amber" : "bg-paper/40 group-hover:bg-paper/80"}`} />
               </button>

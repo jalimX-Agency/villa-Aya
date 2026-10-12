@@ -9,6 +9,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Analytics } from "@/components/Analytics";
 
 // Marcellus: calm Roman capitals chosen by the client (single weight, 400).
 const display = Marcellus({ variable: "--font-display", subsets: ["latin"], weight: "400", display: "swap" });
@@ -45,6 +46,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
         {children}
         <Footer locale={locale} d={d} />
         <WhatsAppButton d={d} />
+        <Analytics />
       </body>
     </html>
   );

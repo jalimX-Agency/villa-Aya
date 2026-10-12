@@ -132,7 +132,27 @@ export const en: Dictionary = {
     required: "Required",
     invalidEmail: "Invalid email",
     invalidDates: "Check-out must be after check-in",
+    invalidPast: "The check-in date can't be in the past",
+    consent: "By sending this form you accept our {link}.",
+    privacyLink: "privacy policy",
+    captcha: "Please complete the anti-spam check.",
   },
+  privacy: {
+    title: "Privacy policy",
+    intro: "We collect only what is needed to answer your stay request. Here is what, why and for how long.",
+    updated: "Last updated: 12 October 2026",
+    sections: [
+      { h: "Who is responsible?", p: ["Villa Aya, Ahfir (60350), Oujda, Morocco. Any question: res@villaaya.ma."] },
+      { h: "What data?", p: ["Through the quote form only: your name, email, phone (optional), stay dates, number of guests, breakfast preference and your message.", "No account, no advertising, no tracking cookies."] },
+      { h: "Why?", p: ["To answer your quote request and organise your stay. Nothing else: no newsletter, no resale of your data."] },
+      { h: "Who has access?", p: ["The villa team. Our technical providers: Vercel (hosting and cookie-free audience measurement) and Resend (sending emails).", "If you write to us on WhatsApp, your message is handled by WhatsApp (Meta) under its own rules."] },
+      { h: "For how long?", p: ["As long as needed to handle your request, then 12 months at most."] },
+      { h: "Your rights", p: ["You can ask to access, correct or delete your data, or object to its processing, by writing to res@villaaya.ma.", "You may also contact the CNDP (Morocco) or the data protection authority in your country."] },
+      { h: "Cookies", p: ["This site uses no tracking or advertising cookies. The form's anti-spam check (Cloudflare Turnstile), when enabled, may set a technical item needed for security."] },
+    ],
+  },
+  map: { show: "Show the map", hint: "Loads Google Maps only if you ask for it.", title: "Map: Villa Aya, Ahfir" },
+  notFound: { title: "Page not found", text: "This page doesn't exist or has moved.", home: "Back to home" },
   reviews: {
     title: "What our guests say",
     score: "10",
@@ -173,6 +193,10 @@ export const en: Dictionary = {
     ],
   },
   seo: {
+    privacy: {
+      title: "Privacy policy | Villa Aya",
+      description: "What data Villa Aya collects through the quote form, why, who it is shared with, and your rights.",
+    },
     home: {
       title: "Villa Aya | Private villa with pool in Ahfir, Oujda",
       description: "A 3,000 m² timber villa with pool, jacuzzi and traditional hammam in Ahfir, between Oujda and Saïdia. Private villa stays: request your quote.",
@@ -212,6 +236,6 @@ export const en: Dictionary = {
     ],
   },
   whatsappMessage: "Hello, I'd like a quote for Villa Aya.",
-  footer: { rights: "All rights reserved.", rules: "Non-smoking · No parties or events", location: "Ahfir, 60350 Oujda, Morocco" },
+  footer: { rights: "All rights reserved.", rules: "Non-smoking · No parties or events", location: "Ahfir, 60350 Oujda, Morocco", privacy: "Privacy" },
   more: "Discover",
 };

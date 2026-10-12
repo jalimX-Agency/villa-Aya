@@ -13,7 +13,10 @@ export const demandeSchema = z
     message: z.string().trim().max(2000).optional().default(""),
     locale: z.enum(["fr", "en"]).default("fr"),
     website: z.string().max(0).optional().default(""), // honeypot: must stay empty
+    captcha: z.string().max(4096).optional().default(""), // Cloudflare Turnstile token (when enabled)
   })
-  .refine((v) => v.checkOut > v.checkIn, { path: ["checkOut"], message: "invalidDates" });
+  .refine((v) => v.checkOut > v.checkIn, { path: ["checkOut"], message: "invalidDates" })
+  // One day of slack so a guest in a timezone ahead of the server is not rejected.
+  .refine((v) => v.checkIn >= new Date(Date.now() - 86_400_000).toISOString().slice(0, 10), { path: ["checkIn"], message: "invalidPast" });
 
 export type Demande = z.infer<typeof demandeSchema>;

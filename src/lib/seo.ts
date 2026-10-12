@@ -12,6 +12,7 @@ const pathFor: Record<SeoPage, string> = {
   gallery: routes.gallery,
   around: routes.around,
   contact: routes.contact,
+  privacy: routes.privacy,
 };
 
 const ogLocale: Record<Locale, string> = { fr: "fr_FR", en: "en_GB" };
@@ -83,6 +84,7 @@ export function breadcrumbJsonLd(locale: Locale, page: Exclude<SeoPage, "home">,
     gallery: d.nav.gallery,
     around: d.nav.around,
     contact: d.nav.contact,
+    privacy: d.privacy.title,
   };
   return {
     "@context": "https://schema.org",

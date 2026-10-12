@@ -8,6 +8,7 @@ import { images } from "@/content/images";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
+import { MapEmbed } from "@/components/MapEmbed";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/alentours">): Promise<Metadata> {
   const { locale } = await params;
@@ -36,6 +37,10 @@ export default async function AroundPage({ params }: PageProps<"/[locale]/alento
           ))}
         </ul>
       </section>
+      <section className="mx-auto max-w-[1500px] px-5 pb-20 md:px-10 md:pb-32">
+        <MapEmbed d={d} />
+      </section>
+
       <CtaBand d={d} locale={locale} />
     </>
   );

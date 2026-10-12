@@ -132,7 +132,27 @@ export const fr: Dictionary = {
     required: "Champ requis",
     invalidEmail: "E-mail invalide",
     invalidDates: "La date de départ doit suivre l'arrivée",
+    invalidPast: "La date d'arrivée ne peut pas être passée",
+    consent: "En envoyant ce formulaire, vous acceptez notre {link}.",
+    privacyLink: "politique de confidentialité",
+    captcha: "Merci de valider la vérification anti-spam.",
   },
+  privacy: {
+    title: "Politique de confidentialité",
+    intro: "Nous collectons le strict nécessaire pour répondre à votre demande de séjour. Voici quoi, pourquoi et pour combien de temps.",
+    updated: "Dernière mise à jour : 12 octobre 2026",
+    sections: [
+      { h: "Qui est responsable ?", p: ["Villa Aya, Ahfir (60350), Oujda, Maroc. Pour toute question : res@villaaya.ma."] },
+      { h: "Quelles données ?", p: ["Via le formulaire de devis uniquement : votre nom, votre e-mail, votre téléphone (facultatif), les dates de séjour, le nombre de voyageurs, le souhait de petit-déjeuner et votre message.", "Pas de compte, pas de publicité, pas de cookie de suivi."] },
+      { h: "Pourquoi ?", p: ["Pour répondre à votre demande de devis et organiser votre séjour. Rien d'autre : pas de newsletter, pas de revente de vos données."] },
+      { h: "Qui y a accès ?", p: ["L'équipe de la villa. Nos prestataires techniques : Vercel (hébergement et mesure d'audience sans cookie) et Resend (envoi des e-mails).", "Si vous nous écrivez sur WhatsApp, votre message est traité par WhatsApp (Meta) selon ses propres règles."] },
+      { h: "Combien de temps ?", p: ["Le temps de traiter votre demande, puis au maximum 12 mois."] },
+      { h: "Vos droits", p: ["Vous pouvez demander l'accès, la correction ou la suppression de vos données, ou vous opposer à leur traitement, en écrivant à res@villaaya.ma.", "Vous pouvez aussi saisir la CNDP (Maroc) ou l'autorité de protection des données de votre pays."] },
+      { h: "Cookies", p: ["Ce site n'utilise pas de cookie de suivi ou publicitaire. La vérification anti-spam du formulaire (Cloudflare Turnstile), lorsqu'elle est active, peut déposer un élément technique nécessaire à la sécurité."] },
+    ],
+  },
+  map: { show: "Afficher la carte", hint: "Charge Google Maps seulement si vous le demandez.", title: "Carte : Villa Aya, Ahfir" },
+  notFound: { title: "Page introuvable", text: "Cette page n'existe pas ou a été déplacée.", home: "Retour à l'accueil" },
   reviews: {
     title: "Ce que disent nos hôtes",
     score: "10",
@@ -169,6 +189,10 @@ export const fr: Dictionary = {
     ],
   },
   seo: {
+    privacy: {
+      title: "Politique de confidentialité | Villa Aya",
+      description: "Quelles données Villa Aya collecte via le formulaire de devis, pourquoi, avec qui elles sont partagées et vos droits.",
+    },
     home: {
       title: "Villa Aya | Villa privée avec piscine à Ahfir, Oujda",
       description: "Villa en bois de 3000 m² avec piscine, jacuzzi et hammam beldi à Ahfir, entre Oujda et Saïdia. Séjour en villa privée : demandez votre devis.",
@@ -208,6 +232,6 @@ export const fr: Dictionary = {
     ],
   },
   whatsappMessage: "Bonjour, je souhaite un devis pour la Villa Aya.",
-  footer: { rights: "Tous droits réservés.", rules: "Non-fumeur · Fêtes et événements non autorisés", location: "Ahfir, 60350 Oujda, Maroc" },
+  footer: { rights: "Tous droits réservés.", rules: "Non-fumeur · Fêtes et événements non autorisés", location: "Ahfir, 60350 Oujda, Maroc", privacy: "Confidentialité" },
   more: "Découvrir",
 };

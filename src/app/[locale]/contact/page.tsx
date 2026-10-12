@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { mapsDirectionsUrl, site, whatsappUrl } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { QuoteForm } from "@/components/QuoteForm";
+import { MapEmbed } from "@/components/MapEmbed";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/contact">): Promise<Metadata> {
   const { locale } = await params;
@@ -38,6 +39,10 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
           <h2 className="display mb-8 text-[1.5rem] md:text-[2rem]">{d.form.title}</h2>
           <QuoteForm d={d} locale={locale} />
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1500px] px-5 pb-24 md:px-10 md:pb-36">
+        <MapEmbed d={d} />
       </section>
     </>
   );

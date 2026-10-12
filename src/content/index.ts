@@ -6,7 +6,7 @@ export type VillaCard = "chalet" | "rose" | "salon" | "bains";
 export type SpaceKey = "pool" | "hammam" | "gym" | "salon" | "prayer" | "table";
 export type FilterKey = "all" | "outdoor" | "chalet" | "salons" | "rooms" | "wellness" | "table";
 export type PageLink = "villa" | "spaces" | "gallery" | "around";
-export type SeoPage = "home" | "villa" | "spaces" | "gallery" | "around" | "contact";
+export type SeoPage = "home" | "villa" | "spaces" | "gallery" | "around" | "contact" | "privacy";
 
 export type Dictionary = {
   meta: { title: string; description: string };
@@ -40,9 +40,13 @@ export type Dictionary = {
   alts: Record<string, string>;
   form: Record<
     | "title" | "intro" | "name" | "email" | "phone" | "checkIn" | "checkOut" | "adults" | "children"
-    | "breakfast" | "message" | "send" | "sending" | "success" | "error" | "required" | "invalidEmail" | "invalidDates",
+    | "breakfast" | "message" | "send" | "sending" | "success" | "error" | "required" | "invalidEmail" | "invalidDates"
+    | "invalidPast" | "consent" | "privacyLink" | "captcha",
     string
   >;
+  privacy: { title: string; intro: string; updated: string; sections: readonly { h: string; p: readonly string[] }[] };
+  map: { show: string; hint: string; title: string };
+  notFound: { title: string; text: string; home: string };
   reviews: {
     title: string;
     score: string;
@@ -57,7 +61,7 @@ export type Dictionary = {
   seoH1: string;
   faq: { title: string; items: readonly { q: string; a: string }[] };
   whatsappMessage: string;
-  footer: { rights: string; rules: string; location: string };
+  footer: { rights: string; rules: string; location: string; privacy: string };
   more: string;
 };
 
