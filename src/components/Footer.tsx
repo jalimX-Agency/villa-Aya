@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/content";
 import { hrefFor, navOrder } from "@/lib/routes";
-import { site, whatsappUrl } from "@/lib/site";
+import { mapsDirectionsUrl, site, whatsappUrl } from "@/lib/site";
 
 export function Footer({ locale, d }: { locale: Locale; d: Dictionary }) {
   return (
@@ -22,6 +22,8 @@ export function Footer({ locale, d }: { locale: Locale; d: Dictionary }) {
         <div className="flex flex-col gap-2">
           <span className="label text-paper/50">Contact</span>
           <a href={whatsappUrl(d.whatsappMessage)} target="_blank" rel="noopener noreferrer" className="w-fit cursor-pointer transition-colors hover:text-amber">WhatsApp {site.phoneDisplay}</a>
+          <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="w-fit cursor-pointer transition-colors hover:text-amber">{d.contact.directions}</a>
+          <a href={site.googleProfile} target="_blank" rel="noopener noreferrer" className="w-fit cursor-pointer transition-colors hover:text-amber">Google</a>
           <span className="text-paper/70">{d.footer.location}</span>
           <span className="text-paper/70">{d.footer.rules}</span>
         </div>

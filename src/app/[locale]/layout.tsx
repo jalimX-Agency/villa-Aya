@@ -38,6 +38,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[lo
   return (
     <html lang={locale} className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body className="min-h-screen antialiased">
+        {/* Runs before first paint so a refresh never flashes at the remembered scroll position. */}
+        <script dangerouslySetInnerHTML={{ __html: "try{history.scrollRestoration='manual'}catch(e){}" }} />
         <SmoothScroll />
         <Header locale={locale} d={d} />
         {children}

@@ -36,7 +36,7 @@ export type Dictionary = {
   };
   gallery: { title: string; intro: string; close: string; filters: Record<FilterKey, string> };
   around: { title: string; intro: string; items: readonly { title: string; text: string }[] };
-  contact: { title: string; text: string; infoTitle: string; info: readonly string[] };
+  contact: { directions: string; title: string; text: string; infoTitle: string; info: readonly string[] };
   alts: Record<string, string>;
   form: Record<
     | "title" | "intro" | "name" | "email" | "phone" | "checkIn" | "checkOut" | "adults" | "children"

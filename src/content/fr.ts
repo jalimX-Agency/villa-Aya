@@ -91,6 +91,7 @@ export const fr: Dictionary = {
     ],
   },
   contact: {
+    directions: "Itinéraire sur Google Maps",
     title: "Contact",
     text: "Pas de tarif affiché : chaque séjour est devisé selon vos dates et le nombre de personnes. Nous répondons personnellement.",
     infoTitle: "Infos pratiques",

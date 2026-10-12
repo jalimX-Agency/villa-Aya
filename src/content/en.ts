@@ -91,6 +91,7 @@ export const en: Dictionary = {
     ],
   },
   contact: {
+    directions: "Directions on Google Maps",
     title: "Contact",
     text: "We don't list prices: every stay is quoted from your dates and party size. We reply personally.",
     infoTitle: "Practical info",

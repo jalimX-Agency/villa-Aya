@@ -4,7 +4,7 @@ import { isLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/content";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
-import { site, whatsappUrl } from "@/lib/site";
+import { mapsDirectionsUrl, site, whatsappUrl } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { QuoteForm } from "@/components/QuoteForm";
 
@@ -26,6 +26,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
         <aside>
           <h2 className="display text-[1.5rem] md:text-[2rem]">{d.contact.infoTitle}</h2>
           <a href={whatsappUrl(d.whatsappMessage)} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-6">WhatsApp {site.phoneDisplay}</a>
+          <a href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost mt-3">{d.contact.directions}</a>
           <ul className="mt-8">
             {d.contact.info.map((l) => (
               <li key={l} className="border-t border-ink/30 py-3">{l}</li>

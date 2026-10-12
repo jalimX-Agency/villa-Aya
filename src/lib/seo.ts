@@ -3,7 +3,7 @@ import { getDictionary, type Dictionary, type SeoPage } from "@/content";
 import { images } from "@/content/images";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { routes } from "@/lib/routes";
-import { site } from "@/lib/site";
+import { mapsPlaceUrl, site } from "@/lib/site";
 
 const pathFor: Record<SeoPage, string> = {
   home: routes.home,
@@ -60,6 +60,9 @@ export function rentalJsonLd(locale: Locale, d: Dictionary) {
     inLanguage: locale,
     address: { "@type": "PostalAddress", addressLocality: "Ahfir", postalCode: "60350", addressRegion: "Oujda", addressCountry: "MA" },
     telephone: `+${site.whatsapp}`,
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
+    hasMap: mapsPlaceUrl,
+    sameAs: [site.googleProfile],
     petsAllowed: true,
     checkinTime: "14:00",
     checkoutTime: "11:00",
